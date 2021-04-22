@@ -5,8 +5,10 @@ window.addEventListener('load', () => {
     let task = document.getElementById("taskPlace");
     let taskDate = document.getElementById("timePlace");
 
-    let taskList = [];  // All task list
+    let taskList = localStorage.getItem("taskList".toString() || "[]");  // All task list
+    taskList = JSON.parse(taskList);
 
+    render();
 
     // Add task to list
     ADD_BUTTON.addEventListener("click", () => {
@@ -45,7 +47,8 @@ window.addEventListener('load', () => {
             taskList.forEach(element => {
                 if (element.task === e.target.parentNode.childNodes[1].innerHTML) {
                     let index = taskList.indexOf(element); // Delete task from task list
-                    taskList.splice(index, 1)
+                    taskList.splice(index, 1);
+                    render();
                 }
             })
         }
@@ -74,7 +77,8 @@ window.addEventListener('load', () => {
                 </div>`;
             }
             tasks.innerHTML += taskCode;
-        }) 
+        })
+        localStorage.setItem("taskList", JSON.stringify(taskList));
     }
 
 })
