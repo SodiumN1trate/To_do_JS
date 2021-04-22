@@ -13,6 +13,11 @@ window.addEventListener('load', () => {
         if (task.value === "" || taskDate.value === "") {
             alert("Aizpildiet visus laukus!");
         }
+        else if (taskDate.value === "04:20" || taskDate.value === "4:20"){
+            document.body.classList.add("gradientImage");
+            document.getElementById("container").classList.add("flyingClass");
+            document.getElementById("title").classList.add("flyingClass2");
+        }
         else{
             addTask = {task: task.value, taskDate: taskDate.value, status: false};
             taskList.push(addTask);
