@@ -5,20 +5,21 @@ window.addEventListener('load', () => {
     let task = document.getElementById("taskPlace");
     let taskDate = document.getElementById("timePlace");
 
-    let taskList = localStorage.getItem("taskList".toString() || "[]");  // All task list
-    taskList = JSON.parse(taskList);
+    let taskList = JSON.parse(localStorage.getItem("taskList")) || [];  // All task list
+    console.log(taskList)
 
     render();
 
     // Add task to list
     ADD_BUTTON.addEventListener("click", () => {
         if (task.value === "" || taskDate.value === "") {
-            alert("Aizpildiet visus laukus!");
+            document.getElementById("errorMessage").style.display = "initial";
         }
         else if (taskDate.value === "04:20" || taskDate.value === "4:20"){
             document.body.classList.add("gradientImage");
             document.getElementById("container").classList.add("flyingClass");
             document.getElementById("title").classList.add("flyingClass2");
+            document.body.style.overflow = "hidden";
         }
         else{
             addTask = {task: task.value, taskDate: taskDate.value, status: false};

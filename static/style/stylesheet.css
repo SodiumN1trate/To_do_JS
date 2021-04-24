@@ -45,6 +45,7 @@ form{
     outline: none;
     border-radius: 6px;
     border: 1px solid black;
+    padding-left: 2%;
 }
 
 #taskPlace{
@@ -196,4 +197,11 @@ form{
         top: 0px;
         right: 0px;
     }
+}
+
+#errorMessage{
+    font-size: 13px;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: none;
 }
