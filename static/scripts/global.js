@@ -1,12 +1,12 @@
 window.addEventListener('load', () => {
-    console.log("Js work") // Js check
+    console.log("Js work"); // Js check
 
     const ADD_BUTTON = document.getElementById("addButton");
     let task = document.getElementById("taskPlace");
     let taskDate = document.getElementById("timePlace");
 
     let taskList = JSON.parse(localStorage.getItem("taskList")) || [];  // All task list
-    console.log(taskList)
+    console.log(taskList);
 
     render();
 
