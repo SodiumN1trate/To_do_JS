@@ -39,6 +39,7 @@ window.addEventListener('load', () => {
                 if (element.task === e.target.parentNode.childNodes[1].innerHTML)
                 {
                     element.status = true;
+                    render();
                 }
             });
         }
@@ -66,15 +67,15 @@ window.addEventListener('load', () => {
                 taskCode = `
                 <div class="taskForm">
                     <span class="task">${e.task}</span>  -  <span class="time">${e.taskDate}</span>
-                    <input type="button" class="deleteButton" value="Delete">
-                    <input type="button" class="doneButton" value="Done">
+                    <input type="button" class="deleteButton" value="Dzēst">
+                    <input type="button" class="doneButton" value="Pabeigt">
                 </div>`;
             }
             else{
                 taskCode = `
                 <div class="taskForm" style="background-color: #47DF21;">
                     <span class="task">${e.task}</span>  -  <span class="time">${e.taskDate}</span>
-                    <input type="button" class="deleteButton" value="Delete">
+                    <input type="button" class="deleteButton" value="Dzēst">
                 </div>`;
             }
             tasks.innerHTML += taskCode;
