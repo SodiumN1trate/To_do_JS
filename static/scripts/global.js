@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
             document.body.style.overflow = "hidden";
         }
         else{
-            addTasks();
+            addTaskInList();
         }
     })
 
@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
     })
 
 
-    function addTasks() {
+    function addTaskInList() {
         for (let index = 0; index < taskList.length; index++) {
             if (taskList[index].task == task.value){
                 document.getElementById("errorMessage").innerHTML = "Tāds uzdevums jau ir pievienots!";
