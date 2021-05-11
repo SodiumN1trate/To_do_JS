@@ -75,7 +75,7 @@ form{
 
 }
 
-.taskForm{
+#taskForm{
     display: table;
     width: 100%;
     color: rgb(24, 24, 24);
@@ -105,7 +105,7 @@ form{
     color: white;
 }
 
-.deleteButton, .doneButton, #addButton, #timePlace, #taskPlace, .taskForm{
+.deleteButton, .doneButton, #addButton, #timePlace, #taskPlace, #taskForm{
     box-shadow: 0.5px 0.5px 5px rgb(34, 34, 34);
 }
 
